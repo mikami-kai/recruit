@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採用サイト | 医療法人社団美加未会</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green-900: #173404;
+  --green-800: #27500A;
+  --green-700: #3B6D11;
+  --green-600: #639922;
+  --green-200: #C0DD97;
+  --green-100: #EAF3DE;
+  --teal-900: #04342C;
+  --teal-800: #085041;
+  --teal-700: #0F6E56;
+  --teal-600: #1D9E75;
+  --teal-100: #E1F5EE;
+  --orange-800: #4A1B0C;
+  --orange-700: #712B13;
+  --orange-600: #993C1D;
+  --orange-500: #D85A30;
+  --orange-200: #F0997B;
+  --orange-100: #F5C4B3;
+  --orange-50: #FAECE7;
+  --cream: #FAF7EF;
+  --cream-2: #F4F0E4;
+  --ink: #2B4339;
+  --ink-soft: #3C4E45;
+  --gray-700: #5F5E5A;
+  --gray-500: #888780;
+  --gray-300: #D3D1C7;
+  --gray-100: #F1EFE8;
+  --white: #FFFFFF;
+  --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+
+/* ===== header ===== */
+header {
+  background: var(--ink);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.logo span {
+  display: block;
+  font-size: 10px;
+  color: var(--green-200);
+  letter-spacing: 0.12em;
+  margin-top: 2px;
+}
+nav {
+  display: flex;
+  gap: 28px;
+}
+nav a {
+  color: var(--cream-2);
+  font-size: 13px;
+  opacity: 0.85;
+}
+nav a:hover { opacity: 1; }
+.header-cta {
+  background: var(--orange-500);
+  color: var(--orange-800);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 22px;
+  white-space: nowrap;
+}
+
+/* ===== hero ===== */
+.hero {
+  padding: 56px 0 60px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #2B4339 0%, #355043 65%, var(--cream) 100%);
+}
+.hero-inner { max-width: 600px; }
+.hero-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--teal-100);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.6;
+  color: var(--cream);
+  margin-bottom: 18px;
+}
+.hero-lead {
+  font-size: 14px;
+  color: var(--gray-300);
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-hero-primary {
+  background: var(--orange-500);
+  color: var(--orange-800);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 24px;
+}
+.btn-hero-secondary {
+  border: 1px solid rgba(250,247,239,0.4);
+  color: var(--cream);
+  font-size: 13px;
+  padding: 11px 24px;
+  border-radius: 24px;
+}
+
+/* ===== section generic ===== */
+section { padding: 56px 0; }
+.section-head { margin-bottom: 28px; }
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--gray-500);
+  margin-bottom: 6px;
+}
+.section-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.section-sub {
+  font-size: 13px;
+  color: var(--gray-700);
+  margin-top: 8px;
+  max-width: 560px;
+}
+
+/* ===== stats strip ===== */
+.stats-strip {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: -34px;
+  position: relative;
+  z-index: 5;
+}
+.stat-card {
+  background: var(--white);
+  border: 0.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  flex: 1;
+  min-width: 150px;
+}
+.stat-card .num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--teal-800);
+}
+.stat-card .num small { font-size: 12px; font-weight: 500; margin-left: 2px; }
+.stat-card .label {
+  font-size: 11px;
+  color: var(--gray-700);
+  margin-top: 3px;
+}
+
+/* ===== job cards ===== */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.job-card {
+  background: var(--white);
+  border: 0.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.job-card.disabled { opacity: 0.55; }
+.job-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--teal-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--teal-800);
+  margin-bottom: 14px;
+}
+.job-card h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.job-card p {
+  font-size: 12px;
+  color: var(--gray-700);
+  line-height: 1.6;
+  flex: 1;
+}
+.job-badge {
+  margin-top: 14px;
+  display: inline-block;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+.job-badge.tour {
+  border: 1px solid var(--teal-700);
+  color: var(--teal-700);
+}
+.job-badge.apply {
+  background: var(--orange-500);
+  color: var(--orange-800);
+}
+.job-badge.soon {
+  background: var(--gray-100);
+  color: var(--gray-500);
+}
+
+/* ===== locations cta ===== */
+.loc-banner {
+  background: var(--white);
+  border: 0.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.loc-banner-text h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.loc-banner-text p {
+  font-size: 12px;
+  color: var(--gray-700);
+}
+.loc-banner-btn {
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 11px 22px;
+  border-radius: 22px;
+  white-space: nowrap;
+}
+
+/* ===== culture / why ===== */
+.why-section { background: var(--ink); color: var(--cream); }
+.why-section .section-eyebrow { color: var(--green-200); }
+.why-section .section-title { color: var(--cream); }
+.why-section .section-sub { color: var(--gray-300); }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+.why-card {
+  background: rgba(250,247,239,0.06);
+  border: 0.5px solid rgba(250,247,239,0.18);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+}
+.why-card h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+.why-card p {
+  font-size: 12px;
+  color: var(--gray-300);
+  line-height: 1.7;
+}
+
+/* ===== final cta ===== */
+.cta-section {
+  background: var(--green-100);
+  border-radius: 20px;
+  margin: 0 28px 0;
+  padding: 44px 40px;
+  text-align: center;
+}
+.cta-section h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--green-900);
+  margin-bottom: 10px;
+}
+.cta-section p {
+  font-size: 13px;
+  color: var(--green-700);
+  margin-bottom: 24px;
+}
+.cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 30px;
+  border-radius: 24px;
+}
+.btn-secondary {
+  border: 1px solid var(--orange-500);
+  color: var(--orange-600);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 13px 30px;
+  border-radius: 24px;
+  background: var(--white);
+}
+.cta-note {
+  font-size: 11px;
+  color: var(--green-700);
+  margin-top: 18px;
+  opacity: 0.8;
+}
+
+/* ===== footer ===== */
+footer {
+  padding: 48px 0 32px;
+  text-align: center;
+}
+footer .corp {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+}
+footer .links {
+  margin-top: 14px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--gray-700);
+}
+
+@media (max-width: 720px) {
+  nav { display: none; }
+  .hero h1 { font-size: 25px; }
+  .job-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .stats-strip { margin-top: 18px; }
+  .loc-banner { flex-direction: column; align-items: flex-start; }
+  .cta-section { margin: 0 14px; padding: 32px 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html">医療法人社団 美加未会<span>RECRUIT SITE</span></a>
+    <nav>
+      <a href="#jobs">募集職種</a>
+      <a href="https://mikami-kai.com/" target="_blank" rel="noopener">拠点紹介</a>
+    </nav>
+    <a class="header-cta" href="#contact">見学・お問い合わせ</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-eyebrow">HOME CARE RECRUIT</div>
+    <h1>在宅医療という現場で、<br>誰かの暮らしに寄り添う仕事を。</h1>
+    <p class="hero-lead">
+      港区・大田区で在宅療養支援診療所を運営する医療法人社団美加未会。
+      医師・診療アシスタントをはじめ、現場を支えるすべての仲間を募集しています。
+    </p>
+    <div class="hero-buttons">
+      <a class="btn-hero-primary" href="#contact">見学・相談はこちら</a>
+      <a class="btn-hero-secondary" href="#jobs">募集職種を見る</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="stats-strip">
+    <div class="stat-card">
+      <div class="num">3<small>拠点</small></div>
+      <div class="label">法人全体の運営拠点数</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">12<small>人</small></div>
+      <div class="label">在籍医師数（常勤5・非常勤7）</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">20<small>人</small></div>
+      <div class="label">現場スタッフ数（看護師・アシスタント・事務・ドライバー）</div>
+    </div>
+    <div class="stat-card">
+      <div class="num">機能強化型</div>
+      <div class="label">在宅療養支援診療所</div>
+    </div>
+  </div>
+</div>
+
+<section id="jobs">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">JOIN US</div>
+      <div class="section-title">募集中の職種</div>
+      <p class="section-sub">職種によって、検討の進め方は人それぞれ。まず話を聞きたい方も、すぐ動きたい方も、それぞれの入口をご用意しています。</p>
+    </div>
+    <div class="job-grid">
+      <a class="job-card" href="doctor.html" style="cursor:pointer;">
+        <div class="job-icon">医</div>
+        <h3>訪問診療医</h3>
+        <p>機能強化型の在宅療養支援診療所で、症例の幅を広げながら患者さまの生活そのものを診る。</p>
+        <span class="job-badge tour">見学・相談</span>
+      </a>
+      <a class="job-card" href="shinryo-assistant.html" style="cursor:pointer;">
+        <div class="job-icon">助</div>
+        <h3>診療アシスタント</h3>
+        <p>医師の訪問診療に同行し、カルテ入力や連携先対応で診療を支える。未経験・無資格から始められます。</p>
+        <span class="job-badge tour">見学・相談</span>
+      </a>
+      <div class="job-card disabled">
+        <div class="job-icon">事</div>
+        <h3>事務スタッフ</h3>
+        <p>レセプト・受付・院内オペレーション全般。近日詳細公開予定です。</p>
+        <span class="job-badge soon">準備中</span>
+      </div>
+      <div class="job-card disabled">
+        <div class="job-icon">車</div>
+        <h3>ドライバー</h3>
+        <p>医師の訪問先までの安全な送迎が役目。近日詳細公開予定です。</p>
+        <span class="job-badge soon">準備中</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="loc-banner">
+    <div class="loc-banner-text">
+      <h3>募集拠点は港区芝浦・大田区糀谷の2拠点</h3>
+      <p>法人としては江東区大島を含む3拠点を運営しています。各クリニックの診療内容や地域性については、法人ホームページでご紹介しています。</p>
+    </div>
+    <a class="loc-banner-btn" href="https://mikami-kai.com/" target="_blank" rel="noopener">法人ホームページで見る</a>
+  </div>
+</div>
+
+<section class="why-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">WHAT WE VALUE</div>
+      <div class="section-title">美加未会で働くということ</div>
+      <p class="section-sub">職種を超えてチームで在宅医療を支える、という姿勢を大切にしています。</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <h4>職種の垣根を越えたチーム医療</h4>
+        <p>医師・看護師・診療アシスタント・事務・ドライバー、それぞれの専門性を活かしながら一つのチームとして患者さまを支えます。</p>
+      </div>
+      <div class="why-card">
+        <h4>ITを活用した業務効率化</h4>
+        <p>電子カルテや業務システムの活用で、手書き作業や事務負担を減らし、本来の仕事に集中できる環境を整えています。</p>
+      </div>
+      <div class="why-card">
+        <h4>経営基盤のある運営体制</h4>
+        <p>理事長・事務長による安定した経営管理のもと、現場が無理なく長く働き続けられる体制づくりを進めています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" id="contact">
+  <div class="cta-section">
+    <h2>まずは見学・カジュアル面談から</h2>
+    <p>応募の前に、現場の雰囲気を知ってください。職種に関わらず、まずはお気軽にご相談ください。</p>
+    <div class="cta-buttons">
+      <a class="btn-primary" href="#">見学を申し込む</a>
+      <a class="btn-secondary" href="#">問い合わせる</a>
+    </div>
+    <p class="cta-note">ご相談・お問い合わせいただいた内容は、採用担当が責任を持って対応します。</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="corp">医療法人社団 美加未会</div>
+    <div class="links">
+      <a href="https://mikami-kai.com/">法人ホームページ</a>
+      <a href="#">プライバシーポリシー</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>訪問診療医募集 | 医療法人社団美加未会 採用サイト</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green-900: #173404;
+  --green-800: #27500A;
+  --green-700: #3B6D11;
+  --green-600: #639922;
+  --green-200: #C0DD97;
+  --green-100: #EAF3DE;
+  --teal-900: #04342C;
+  --teal-800: #085041;
+  --teal-700: #0F6E56;
+  --teal-600: #1D9E75;
+  --teal-100: #E1F5EE;
+  --orange-800: #4A1B0C;
+  --orange-700: #712B13;
+  --orange-600: #993C1D;
+  --orange-500: #D85A30;
+  --orange-200: #F0997B;
+  --orange-100: #F5C4B3;
+  --orange-50: #FAECE7;
+  --cream: #FAF7EF;
+  --cream-2: #F4F0E4;
+  --ink: #2B4339;
+  --ink-soft: #3C4E45;
+  --gray-700: #5F5E5A;
+  --gray-500: #888780;
+  --gray-300: #D3D1C7;
+  --gray-100: #F1EFE8;
+  --white: #FFFFFF;
+  --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+
+/* ===== header ===== */
+header {
+  background: var(--ink);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.logo span {
+  display: block;
+  font-size: 10px;
+  color: var(--green-200);
+  letter-spacing: 0.12em;
+  margin-top: 2px;
+}
+nav {
+  display: flex;
+  gap: 28px;
+}
+nav a {
+  color: var(--cream-2);
+  font-size: 13px;
+  opacity: 0.85;
+}
+nav a:hover { opacity: 1; }
+.header-cta {
+  background: var(--orange-500);
+  color: var(--orange-800);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 22px;
+  white-space: nowrap;
+}
+
+/* ===== breadcrumb ===== */
+.breadcrumb {
+  padding: 18px 0 0;
+  font-size: 12px;
+  color: var(--gray-500);
+}
+.breadcrumb a { color: var(--teal-700); }
+
+/* ===== hero ===== */
+.hero {
+  padding: 36px 0 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--teal-700);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.hero h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.55;
+  color: var(--ink);
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: var(--teal-700);
+  background: linear-gradient(transparent 62%, var(--green-200) 62%);
+}
+.hero-lead {
+  font-size: 15px;
+  color: var(--ink-soft);
+  max-width: 560px;
+  margin-bottom: 28px;
+}
+.hero-stats {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.hero-stat {
+  background: var(--white);
+  border: 0.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  min-width: 130px;
+}
+.hero-stat .num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--teal-800);
+}
+.hero-stat .num small { font-size: 13px; font-weight: 500; margin-left: 2px; }
+.hero-stat .label {
+  font-size: 11px;
+  color: var(--gray-700);
+  margin-top: 2px;
+}
+
+/* ===== section generic ===== */
+section { padding: 52px 0; }
+.section-head { margin-bottom: 28px; }
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--gray-500);
+  margin-bottom: 6px;
+}
+.section-title {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.section-sub {
+  font-size: 13px;
+  color: var(--gray-700);
+  margin-top: 8px;
+  max-width: 540px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--gray-300);
+  width: 100%;
+}
+
+/* ===== work content ===== */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.work-card {
+  background: var(--white);
+  border: 0.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  gap: 14px;
+}
+.work-num {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 13px;
+  color: var(--teal-600);
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 28px;
+}
+.work-card h3 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.work-card p {
+  font-size: 13px;
+  color: var(--gray-700);
+}
+.work-note {
+  margin-top: 18px;
+  background: var(--teal-100);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--teal-900);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* ===== team ===== */
+.team-section { background: var(--ink); color: var(--cream); }
+.team-section .section-eyebrow { color: var(--green-200); }
+.team-section .section-title { color: var(--cream); }
+.team-section .section-sub { color: var(--gray-300); }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-top: 24px;
+}
+.team-card {
+  background: rgba(250,247,239,0.06);
+  border: 0.5px solid rgba(250,247,239,0.18);
+  border-radius: var(--radius);
+  padding: 16px 12px;
+  text-align: center;
+}
+.team-card .count {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--green-200);
+}
+.team-card .count small {
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 1px;
+}
+.team-card .role {
+  font-size: 12px;
+  color: var(--cream-2);
+  margin-top: 4px;
+}
+.culture-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+.culture-tag {
+  border: 0.5px solid rgba(250,247,239,0.3);
+  border-radius: 22px;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: var(--cream-2);
+}
+.mgmt-row {
+  margin-top: 18px;
+  font-size: 12px;
+  color: rgba(250,247,239,0.55);
+}
+
+/* ===== day flow ===== */
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.flow-item {
+  display: flex;
+  gap: 22px;
+  padding: 16px 0;
+  border-bottom: 0.5px solid var(--gray-300);
+}
+.flow-item:last-child { border-bottom: none; }
+.flow-time {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--teal-700);
+  width: 90px;
+  flex-shrink: 0;
+}
+.flow-text h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+.flow-text p {
+  font-size: 12px;
+  color: var(--gray-700);
+}
+
+/* ===== treatment table ===== */
+.treat-table {
+  background: var(--white);
+  border: 0.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.treat-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  border-bottom: 0.5px solid var(--gray-300);
+}
+.treat-row:last-child { border-bottom: none; }
+.treat-label {
+  background: var(--gray-100);
+  padding: 16px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+.treat-value {
+  padding: 16px 20px;
+  font-size: 13px;
+  color: var(--ink);
+}
+.treat-value .salary {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--teal-800);
+}
+
+/* ===== fit ===== */
+.fit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.fit-col h3 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.fit-col.yes h3 { color: var(--teal-700); }
+.fit-col.flex h3 { color: var(--orange-600); }
+.fit-list { list-style: none; }
+.fit-list li {
+  font-size: 13px;
+  color: var(--ink-soft);
+  padding: 8px 0 8px 20px;
+  position: relative;
+  border-bottom: 0.5px solid var(--gray-300);
+}
+.fit-list li:last-child { border-bottom: none; }
+.fit-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green-600);
+}
+.fit-col.flex .fit-list li::before { background: var(--orange-500); }
+
+/* ===== locations ===== */
+.loc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.loc-card {
+  background: var(--white);
+  border: 0.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.loc-area {
+  font-size: 11px;
+  color: var(--teal-700);
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+.loc-card h3 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.loc-meta {
+  font-size: 12px;
+  color: var(--gray-700);
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+.loc-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 18px;
+  margin-bottom: 16px;
+}
+.loc-status.open { background: var(--green-100); color: var(--green-800); }
+.loc-status.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-600); }
+.loc-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 22px;
+}
+
+/* ===== final cta ===== */
+.cta-section {
+  background: var(--green-100);
+  border-radius: 20px;
+  margin: 0 28px 0;
+  padding: 44px 40px;
+  text-align: center;
+}
+.cta-section h2 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--green-900);
+  margin-bottom: 10px;
+}
+.cta-section p {
+  font-size: 13px;
+  color: var(--green-700);
+  margin-bottom: 24px;
+}
+.cta-buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 30px;
+  border-radius: 24px;
+}
+.btn-secondary {
+  border: 1px solid var(--orange-500);
+  color: var(--orange-600);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 13px 30px;
+  border-radius: 24px;
+  background: var(--white);
+}
+.cta-note {
+  font-size: 11px;
+  color: var(--green-700);
+  margin-top: 18px;
+  opacity: 0.8;
+}
+
+/* ===== footer ===== */
+footer {
+  padding: 48px 0 32px;
+  text-align: center;
+}
+footer .corp {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+}
+footer .links {
+  margin-top: 14px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--gray-700);
+}
+
+@media (max-width: 720px) {
+  nav { display: none; }
+  .hero h1 { font-size: 26px; }
+  .work-grid, .fit-grid, .loc-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+  .treat-row { grid-template-columns: 1fr; }
+  .treat-label { padding: 12px 16px 4px; background: transparent; font-size: 11px; color: var(--gray-500); }
+  .treat-value { padding: 0 16px 16px; }
+  .cta-section { margin: 0 14px; padding: 32px 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html">医療法人社団 美加未会<span>RECRUIT SITE</span></a>
+    <nav>
+      <a href="index.html#jobs">募集職種</a>
+      <a href="https://mikami-kai.com/" target="_blank" rel="noopener">拠点紹介</a>
+    </nav>
+    <a class="header-cta" href="#contact">見学・お問い合わせ</a>
+  </div>
+</header>
+
+<div class="wrap breadcrumb">
+  <a href="index.html">採用トップ</a> ／ 募集職種 ／ 訪問診療医
+</div>
+
+<div class="wrap hero">
+  <div class="hero-eyebrow">RECRUIT — 訪問診療医</div>
+  <h1>外来では出会えない、<em>患者さまの生活そのもの</em>を診る。</h1>
+  <p class="hero-lead">
+    在宅医療は、病気だけでなく暮らしを診る医療です。住み慣れた自宅で最期まで過ごしたいという患者さまとご家族に向き合い、
+    内科を中心に幅広い疾患・病態に対応します。当院は機能強化型の在宅療養支援診療所として、
+    重症度の高い症例にもチームで対応できる体制を整えています。経験を問わず、在宅医療に関心のある医師を歓迎します。
+  </p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="num">1600<small>〜2200万円</small></div>
+      <div class="label">年収（応相談）</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">輪番<small>制</small></div>
+      <div class="label">オンコール体制</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">5<small>人 / 7人</small></div>
+      <div class="label">在籍医師数（常勤 / 非常勤）</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">機能強化型</div>
+      <div class="label">在宅療養支援診療所</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap"><div class="divider"></div></div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">WORK</div>
+      <div class="section-title">仕事内容</div>
+      <p class="section-sub">診療アシスタント、ドライバーが同行するため、医師は診療に集中できます。</p>
+    </div>
+    <div class="work-grid">
+      <div class="work-card">
+        <div class="work-num">01</div>
+        <div>
+          <h3>定期訪問診療</h3>
+          <p>ご自宅や施設を計画的に訪問し、診察・治療・処方を行います。月2回を基本に、病状に応じて頻度を調整します。</p>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-num">02</div>
+        <div>
+          <h3>往診（緊急対応）</h3>
+          <p>担当患者さまの急変時に訪問する往診は、輪番制（月4回程度）で対応します。1人に負担が集中しない体制です。</p>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-num">03</div>
+        <div>
+          <h3>ターミナルケア・看取り</h3>
+          <p>住み慣れた場所での看取りを希望される患者さま・ご家族に寄り添い、最期まで伴走します。</p>
+        </div>
+      </div>
+      <div class="work-card">
+        <div class="work-num">04</div>
+        <div>
+          <h3>連携先・多職種との調整</h3>
+          <p>病院の地域連携室、ケアマネジャー、訪問看護ステーションなどと連携し、患者さまを面で支えます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="work-note">
+      <span>※</span>
+      <span>診療へは診療アシスタントが同行します。アシスタントと連携を取りながら診療に臨んでいただきます。</span>
+    </div>
+  </div>
+</section>
+
+<section class="team-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">TEAM & CULTURE</div>
+      <div class="section-title">チームと働く環境</div>
+      <p class="section-sub">診療アシスタント・看護師・事務・ドライバーが医師をチームで支える体制です。</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card"><div class="count" style="font-size:17px;">常勤5<small>人</small><br>非常勤7<small>人</small></div><div class="role">医師</div></div>
+      <div class="team-card"><div class="count">2<small>人</small></div><div class="role">看護師</div></div>
+      <div class="team-card"><div class="count">6<small>人</small></div><div class="role">診療アシスタント</div></div>
+      <div class="team-card"><div class="count">4<small>人</small></div><div class="role">事務</div></div>
+      <div class="team-card"><div class="count">8<small>人</small></div><div class="role">ドライバー</div></div>
+    </div>
+    <div class="mgmt-row">経営・管理体制：2人（理事長・事務長）</div>
+    <div class="culture-row">
+      <div class="culture-tag">往診は輪番制・特定の医師に偏らない体制</div>
+      <div class="culture-tag">電子カルテ・業務システムで事務負担を軽減</div>
+      <div class="culture-tag">機能強化型で症例の幅が広い</div>
+      <div class="culture-tag">院長・他の医師と相談しやすい距離感</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">A DAY</div>
+      <div class="section-title">ある一日の流れ</div>
+    </div>
+    <div class="flow">
+      <div class="flow-item">
+        <div class="flow-time">8:45</div>
+        <div class="flow-text">
+          <h4>出勤・カンファレンス</h4>
+          <p>診療アシスタントを交え、その日訪問する患者さまの状態と注意点を確認します。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-time">9:30</div>
+        <div class="flow-text">
+          <h4>午前の訪問診療</h4>
+          <p>ドライバーが運転をするため、移動中にカルテ記載や連携先への連絡を行います。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-time">12:00</div>
+        <div class="flow-text">
+          <h4>休憩</h4>
+          <p>クリニックに戻って休憩。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-time">13:00</div>
+        <div class="flow-text">
+          <h4>午後の訪問診療</h4>
+          <p>引き続き訪問。重症度の高い患者さまには時間を多めに確保します。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-time">17:00</div>
+        <div class="flow-text">
+          <h4>カルテ確認・他医師との情報共有</h4>
+          <p>翌日以降の往診当番の確認や、気になる症例について他の医師と相談する時間です。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">CONDITIONS</div>
+      <div class="section-title">給与・待遇</div>
+    </div>
+    <div class="treat-table">
+      <div class="treat-row">
+        <div class="treat-label">雇用形態</div>
+        <div class="treat-value">常勤・非常勤（応相談）</div>
+      </div>
+      <div class="treat-row">
+        <div class="treat-label">給与</div>
+        <div class="treat-value">
+          <div class="salary">年収 1,600万円 〜 2,200万円（応相談）</div>
+          経験・スキル・常勤/非常勤の別により応相談。往診（オンコール）対応分は別途手当を支給します。
+        </div>
+      </div>
+      <div class="treat-row">
+        <div class="treat-label">勤務時間</div>
+        <div class="treat-value">月〜金曜日　8:45〜17:45（休憩60分）　※非常勤は応相談</div>
+      </div>
+      <div class="treat-row">
+        <div class="treat-label">オンコール・往診</div>
+        <div class="treat-value">輪番制（月4回程度）。特定の医師に負担が集中しない体制です。</div>
+      </div>
+      <div class="treat-row">
+        <div class="treat-label">休日・休暇</div>
+        <div class="treat-value">土曜・日曜、年末年始休暇、有給休暇（法定通り）</div>
+      </div>
+      <div class="treat-row">
+        <div class="treat-label">福利厚生</div>
+        <div class="treat-value">社会保険完備、健康診断</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">WHO WE'RE LOOKING FOR</div>
+      <div class="section-title">こんな方を歓迎しています</div>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-col yes">
+        <h3>歓迎する人物像</h3>
+        <ul class="fit-list">
+          <li>患者さまの生活背景まで含めて診ることに関心がある方</li>
+          <li>多職種と連携しながらチーム医療を行いたい方</li>
+          <li>在宅医療未経験でも、学びながら取り組みたい方</li>
+          <li>緩和ケア・看取りに丁寧に向き合いたい方</li>
+        </ul>
+      </div>
+      <div class="fit-col flex">
+        <h3>資格・経験について</h3>
+        <ul class="fit-list">
+          <li>医師免許（内科系の臨床経験があれば歓迎）</li>
+          <li>在宅医療未経験可・常勤/非常勤は応相談</li>
+          <li>普通自動車運転免許（ドライバーが運転するため必須ではありません）</li>
+          <li>専門医資格をお持ちの方は診療の幅を活かせます</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="locations">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">LOCATIONS</div>
+      <div class="section-title">募集中の拠点</div>
+      <p class="section-sub">訪問診療医は、港区・芝浦と大田区・糀谷の2拠点で募集しています。</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div class="loc-area">港区 芝浦</div>
+        <h3>芝浦ホームクリニック</h3>
+        <div class="loc-meta">JR山手線・京浜東北線「田町」駅徒歩5分<br>都営浅草線・三田線「三田」駅徒歩10分</div>
+        <div class="loc-status open"><span class="dot"></span>募集中</div>
+        <a class="loc-btn" href="#contact">この拠点について相談する</a>
+      </div>
+      <div class="loc-card">
+        <div class="loc-area">大田区 糀谷</div>
+        <h3>ひかりホームクリニック</h3>
+        <div class="loc-meta">京浜急行「糀谷」駅徒歩7分</div>
+        <div class="loc-status open"><span class="dot"></span>募集中</div>
+        <a class="loc-btn" href="#contact">この拠点について相談する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" id="contact">
+  <div class="cta-section">
+    <h2>まずは一度、現場を見にいらしてください</h2>
+    <p>診療体制やチームの雰囲気は、実際に見ていただくのが一番です。在宅医療が初めての方も、お気軽にご相談ください。</p>
+    <div class="cta-buttons">
+      <a class="btn-primary" href="#">見学・カジュアル面談に申し込む</a>
+      <a class="btn-secondary" href="#">資料請求・応募について相談する</a>
+    </div>
+    <p class="cta-note">ご相談・お問い合わせいただいた内容は、院長・採用担当が責任を持って対応します。</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="corp">医療法人社団 美加未会</div>
+    <div class="links">
+      <a href="index.html">採用トップ</a>
+      <a href="https://mikami-kai.com/">法人ホームページ</a>
+      <a href="#">プライバシーポリシー</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
