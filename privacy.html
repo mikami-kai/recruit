@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人情報保護方針 | 医療法人社団美加未会 採用サイト</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green-900: #173404;
+  --green-800: #27500A;
+  --green-700: #3B6D11;
+  --green-200: #C0DD97;
+  --green-100: #EAF3DE;
+  --teal-700: #0F6E56;
+  --orange-800: #4A1B0C;
+  --orange-500: #D85A30;
+  --cream: #FAF7EF;
+  --cream-2: #F4F0E4;
+  --ink: #2B4339;
+  --ink-soft: #3C4E45;
+  --gray-700: #5F5E5A;
+  --gray-500: #888780;
+  --gray-300: #D3D1C7;
+  --gray-100: #F1EFE8;
+  --white: #FFFFFF;
+  --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+
+header {
+  background: var(--ink);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  color: var(--cream);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.logo span {
+  display: block;
+  font-size: 10px;
+  color: var(--green-200);
+  letter-spacing: 0.12em;
+  margin-top: 2px;
+}
+nav {
+  display: flex;
+  gap: 28px;
+}
+nav a {
+  color: var(--cream-2);
+  font-size: 13px;
+  opacity: 0.85;
+}
+nav a:hover { opacity: 1; }
+.header-cta {
+  background: var(--orange-500);
+  color: var(--orange-800);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 22px;
+  white-space: nowrap;
+}
+
+.breadcrumb {
+  padding: 18px 0 0;
+  font-size: 12px;
+  color: var(--gray-500);
+}
+.breadcrumb a { color: var(--teal-700); }
+
+.page-header {
+  padding: 36px 0 40px;
+  border-bottom: 0.5px solid var(--gray-300);
+  margin-bottom: 48px;
+}
+.page-header .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--gray-500);
+  margin-bottom: 8px;
+}
+.page-header h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.page-header .date {
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+.policy-body {
+  max-width: 720px;
+  padding-bottom: 72px;
+}
+
+.policy-lead {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.9;
+  margin-bottom: 40px;
+  padding: 20px 24px;
+  background: var(--green-100);
+  border-radius: var(--radius);
+}
+
+.policy-section {
+  margin-bottom: 36px;
+}
+.policy-section h2 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+.policy-section h2 .num {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 13px;
+  color: var(--teal-700);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.policy-section p {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.9;
+}
+.policy-section ul {
+  list-style: none;
+  margin-top: 8px;
+}
+.policy-section ul li {
+  font-size: 13px;
+  color: var(--ink-soft);
+  padding: 6px 0 6px 16px;
+  position: relative;
+  border-bottom: 0.5px solid var(--gray-300);
+}
+.policy-section ul li:last-child { border-bottom: none; }
+.policy-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal-700);
+}
+
+.contact-box {
+  background: var(--white);
+  border: 0.5px solid var(--gray-300);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-top: 10px;
+}
+.contact-box p {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.9;
+}
+.contact-box a {
+  color: var(--teal-700);
+  text-decoration: underline;
+}
+
+.divider {
+  height: 0.5px;
+  background: var(--gray-300);
+  margin: 40px 0;
+}
+
+footer {
+  padding: 48px 0 32px;
+  text-align: center;
+}
+footer .corp {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+}
+footer .links {
+  margin-top: 14px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--gray-700);
+}
+
+@media (max-width: 720px) {
+  nav { display: none; }
+  .page-header h1 { font-size: 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html">医療法人社団 美加未会<span>RECRUIT SITE</span></a>
+    <nav>
+      <a href="index.html#jobs">募集職種</a>
+      <a href="https://mikami-kai.com/" target="_blank" rel="noopener">拠点紹介</a>
+    </nav>
+    <a class="header-cta" href="https://forms.gle/wb7TRdd65KVYm7XT8" target="_blank" rel="noopener">見学・お問い合わせ</a>
+  </div>
+</header>
+
+<div class="wrap breadcrumb">
+  <a href="index.html">採用トップ</a> ／ 個人情報保護方針
+</div>
+
+<div class="wrap">
+  <div class="page-header">
+    <div class="eyebrow">PRIVACY POLICY</div>
+    <h1>個人情報保護方針</h1>
+    <div class="date">制定：2026年7月</div>
+  </div>
+
+  <div class="policy-body">
+    <p class="policy-lead">
+      医療法人社団美加未会（以下「当法人」）は、採用サイトを通じてご提供いただいた個人情報の取り扱いについて、以下の方針を定めます。
+    </p>
+
+    <div class="policy-section">
+      <h2><span class="num">第1条</span>取得する個人情報</h2>
+      <p>当法人は、採用活動において以下の情報を取得します。</p>
+      <ul>
+        <li>氏名</li>
+        <li>電話番号</li>
+        <li>メールアドレス</li>
+        <li>希望職種・希望拠点</li>
+        <li>現在の就業状況</li>
+        <li>経歴・自己PR</li>
+        <li>その他お問い合わせいただいた内容</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">第2条</span>利用目的</h2>
+      <p>取得した個人情報は、採用選考および採用に関するご連絡のみに利用します。当法人の診療業務その他の目的には一切利用しません。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">第3条</span>第三者への提供</h2>
+      <p>法令に基づく場合を除き、ご本人の同意なく第三者に個人情報を提供することはありません。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">第4条</span>外部サービスの利用について</h2>
+      <p>お問い合わせフォームにはGoogle LLC（Googleフォーム）を利用しています。フォームへの入力情報はGoogleのサーバーに送信されます。Googleの個人情報の取り扱いについては、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--teal-700);text-decoration:underline;">Googleプライバシーポリシー</a>をご参照ください。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">第5条</span>保管・管理</h2>
+      <p>取得した個人情報は、採用選考の終了後、一定期間を経て適切に削除します。情報へのアクセスは採用担当者に限定し、不正アクセス・漏洩の防止に努めます。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">第6条</span>開示・訂正・削除のご請求</h2>
+      <p>ご自身の個人情報について開示・訂正・削除をご希望の場合は、下記お問い合わせ窓口までご連絡ください。ご本人確認の上、合理的な期間内に対応いたします。</p>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">第7条</span>お問い合わせ窓口</h2>
+      <div class="contact-box">
+        <p>
+          医療法人社団美加未会　採用担当<br>
+          メール：<a href="mailto:recruit@mikami-kai.com">recruit@mikami-kai.com</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="policy-section">
+      <h2><span class="num">第8条</span>方針の改定</h2>
+      <p>本方針は必要に応じて改定することがあります。改定した場合は、本ページにて公表します。</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <p style="font-size:12px; color:var(--gray-500);">医療法人社団美加未会<br>制定：2026年7月</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="corp">医療法人社団 美加未会</div>
+    <div class="links">
+      <a href="index.html">採用トップ</a>
+      <a href="https://mikami-kai.com/">法人ホームページ</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
